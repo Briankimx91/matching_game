@@ -9,11 +9,14 @@ function Game(){
     self.init = function(){
         $(document).ready(function(){
             $('.card').click(self.clickHandler);
-            // $('.reset').click(self.reset);
         })
     };
 
     self.clickHandler = function(){
+        audio.play();
+        setTimeout(function(){
+            audio.pause();
+        }, 2000);
         $(this).children('.front').addClass('open');
         if(first_card_clicked == null){
             first_card = $(this).children('.front');
@@ -37,6 +40,7 @@ function Game(){
                 console.log("not matched");
                 $('.attempts').text(++attempts_counter);
                 denominator++;
+
                 $('.card').off("click");
                 setTimeout(self.notMatched,2000);
             }
@@ -45,6 +49,12 @@ function Game(){
     };
 
     self.notMatched = function() {
+        setTimeout(function(){
+            audio.play();
+            setTimeout(function(){
+                audio.pause();
+            }, 2000);
+        });
         first_card.addClass('close');
         second_card.addClass('close');
         setTimeout(self.someFunction,2000);
@@ -59,15 +69,5 @@ function Game(){
         first_card_clicked = null;
         second_card_clicked = null;
     };
-    // self.reset = function(){
-    //     first_card.removeClass('close open');
-    //     second_card.removeClass('close open');
-    //     first_card = null;
-    //     second_card = null;
-    //     first_card_clicked = null;
-    //     second_card_clicked = null;
-    //     $('.attempts').text(attempts_counter = 0);
-    //     $('.accuracy').text(match_counter=0, denominator=0);
-    // };
     self.init();
 }
