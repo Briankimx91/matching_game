@@ -1,0 +1,96 @@
+body {
+    background-image: url(./imgs/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+body > div {
+    text-align: center;
+}
+.back {
+    height:100%;
+    width:100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.board {
+    display:inline-block;
+    height:622px;
+    width:814px;
+}
+
+.card {
+    border:1px solid black;
+    position: relative;
+    overflow:hidden;
+    display:inline-block;
+    margin:3px;
+    height:95%;
+    width:24%;
+}
+
+.front {
+    background-image: url(./imgs/front.jpg);
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+}
+
+.game_container {
+    width:1023px;
+}
+
+.hidden {
+    display:none;
+}
+
+.logo {
+    height:100px;
+    width:600px;
+}
+
+.row {
+    height:24%;
+}
+
+.side_bar {
+    position: relative;
+    display:inline-block;
+    float:left;
+    height: 622px;
+    width: 209px;
+}
+
+.side_bar h2 {
+    padding-bottom:20px;
+
+}
+
+.open {
+    -webkit-animation: goingUp 2s linear forwards;
+    animation: goingUp 2s linear forwards;
+}
+@-webkit-keyframes goingUp {
+    from{bottom:0;}
+    to{bottom:138px;}
+}
+@keyframes goingUp {
+    from{bottom:0;}
+    to{bottom:138px;}
+}
+
+.close {
+    -webkit-animation: goingDown 2s linear forwards;
+    animation: goingDown 2s linear forwards;
+}
+@-webkit-keyframes goingDown {
+    from{bottom:138px;}
+    to{bottom:0;}
+}
+@keyframes goingDown {
+    from{bottom:138px;}
+    to{bottom:0;}
+}
