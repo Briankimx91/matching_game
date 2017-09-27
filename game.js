@@ -29,6 +29,12 @@ function Game(){
             $(this).off('click',self.clickHandler);
             console.log("second card clicked");
             if(first_card_clicked === second_card_clicked){
+                if(match_counter === 8){
+                    console.log("game finished");
+                    $(document).off('click');
+                    //modal show
+                    return;
+                }
                 console.log("matched");
                 match_counter++;
                 denominator++;
