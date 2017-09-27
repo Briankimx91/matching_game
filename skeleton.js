@@ -1,25 +1,25 @@
 const skeleton = new Skeleton();
+let pics = [
+    './imgs/dodge_challenger.png',
+    './imgs/gtr.png',
+    './imgs/bugatti.png',
+    './imgs/porsche_911.png',
+    './imgs/laferrari.png',
+    './imgs/gallardo.png',
+    './imgs/gts_amg.png',
+    './imgs/r8.png',
+    './imgs/dodge_challenger.png',
+    './imgs/gtr.png',
+    './imgs/bugatti.png',
+    './imgs/porsche_911.png',
+    './imgs/laferrari.png',
+    './imgs/gallardo.png',
+    './imgs/gts_amg.png',
+    './imgs/r8.png',
+];
 
 function Skeleton () {
     const self = this;
-    let pics = [
-        './imgs/dodge_challenger.png',
-        './imgs/gtr.png',
-        './imgs/bugatti.png',
-        './imgs/porsche_911.png',
-        './imgs/laferrari.png',
-        './imgs/gallardo.png',
-        './imgs/gts_amg.png',
-        './imgs/r8.png',
-        './imgs/dodge_challenger.png',
-        './imgs/gtr.png',
-        './imgs/bugatti.png',
-        './imgs/porsche_911.png',
-        './imgs/laferrari.png',
-        './imgs/gallardo.png',
-        './imgs/gts_amg.png',
-        './imgs/r8.png',
-    ];
     self.init = function() {
         $(document).ready(function(){
             self.shuffle(pics);
